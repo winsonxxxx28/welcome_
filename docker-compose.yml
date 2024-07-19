@@ -5,6 +5,8 @@ services:
     # for deployments
     image: manual:v0.1.0
     container_name: twaa_manual
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     build:
       context: .   # 指定Dockerfile所在的目录
       dockerfile: Dockerfile  # 指定要使用的Dockerfile
